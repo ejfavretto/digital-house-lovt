@@ -1,7 +1,8 @@
 :root {
   --cor-fundo-principal: #FFFFFF;
+  --cor-texto-principal: #FFFFFF;
   --cor-fundo-body: #E5E5E5;
-  --largura-padrao: 608px;
+
 }
 
 * {
@@ -98,7 +99,7 @@ main {
   background-position: center;
   background-size: cover;
   position: relative;
-  width: var(--largura-padrao);
+  width: 608px;
   height: 259px;
 
   /* max-width: 608px; */
@@ -190,7 +191,6 @@ main {
 .yourStyle {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: 608px;
   margin: 30px;
@@ -202,67 +202,38 @@ main {
   margin-bottom: 13px;
 }
 
-.yourStyle .industrial {
+.yourStyleImagem {
   margin-top: 13px;
   max-width: 697px;
   width: 100%;
   opacity: 0.5;
   height: 80px;
   color: #fff;
-  background-image: url(../img/yourStyleIndustrial.svg);
   background-size: cover;
   background-position: center;
 }
 
-.industrial span {
-  position: relative;
-  top: 30%;
-  left: 45%;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-  font-size: 25px;
+.yourStyle .industrial {
+  background-image: url(../img/yourStyleIndustrial.svg);
 }
+
 
 .modern {
-  margin-top: 13px;
-  max-width: 697px;
-  width: 100%;
-  opacity: 0.5;
-  height: 80px;
-  color: #fff;
   background-image: url(../img/yourStyleModern.svg);
-  background-size: cover;
-  background-position: center;
 }
 
-.modern span {
-  position: relative;
-  top: 30%;
-  left: 45%;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-  font-size: 25px;
-}
 
 .classic {
-  margin-top: 13px;
-  max-width: 697px;
-  width: 100%;
-  opacity: 0.5;
-  height: 80px;
-  color: #fff;
   background-image: url(../img/yourStyleClassic.svg);
-  background-size: cover;
-  background-position: center;
 }
 
-.classic span {
+.yourStyle span {
   position: relative;
   top: 30%;
   left: 45%;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
   font-size: 25px;
 }
-
-
 /* your style - termino  */
 
 /* footer - inicio  */
@@ -275,22 +246,16 @@ footer {
   font-size: 12px;
   height: 243px;
 }
+
 footer ul li{
   list-style: none;
 }
 
 .mapa {
-  /* background-color: red; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-content: flex-start; */
   background-image: url(../img/mapa.svg);
-  /* background-position: center;
-  background-size: cover; */
   width: 252px;
   height: 163px;
   margin: 40px;
-  /* border-radius: 1px; */
 }
 
 .dados-endereco {
@@ -304,9 +269,29 @@ footer ul li{
 
 .dados-endereco ul li {
   text-decoration: none;
+  line-height: 26px;
+
 }
 .contatos {
   background-color: lightcoral;
+}
+
+.redesSociais {
+  margin-top: 10px;
+}
+
+.redesSociais span {
+  text-transform: uppercase;
+}
+
+.redesSociaisIcones ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.redesSociaisIcones ul li a {
+  color: var(--cor-texto-principal);
+
 }
 /* footer - inicio  */
 
