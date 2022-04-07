@@ -101,9 +101,6 @@ main {
   position: relative;
   width: 608px;
   height: 259px;
-
-  /* max-width: 608px; */
-
 }
 
 .carrossel img {
@@ -301,8 +298,23 @@ footer ul li{
   */
 
 @media (max-width: 768px) {
-  .logo {
-    font-size: 10px;
+  
+  container {
+    width: 100%;
   }
 
+  header {
+    display: flex;
+  }
+
+  .logoSlogan {
+    margin-left: -35px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  
 }
