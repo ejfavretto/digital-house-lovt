@@ -1,3 +1,9 @@
+:root {
+  --cor-fundo-principal: #FFFFFF;
+  --cor-fundo-body: #E5E5E5;
+  --largura-padrao: 608px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +15,12 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: #E5E5E5;
+  background-color: var(--cor-fundo-body);
 }
 
 container {
   width: 687px;
-  background-color: #FFFFFF;
+  background-color: var(--cor-fundo-principal);
 }
 
 /* header - inicio */
@@ -23,7 +29,7 @@ header {
   justify-content: space-between;
   width: 100;  
   height: 49px;
-  background-color: #FFFFFF;
+  background-color: var(--cor-fundo-principal);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -92,7 +98,7 @@ main {
   background-position: center;
   background-size: cover;
   position: relative;
-  width: 608px;
+  width: var(--largura-padrao);
   height: 259px;
 
   /* max-width: 608px; */
@@ -100,11 +106,6 @@ main {
 }
 
 .carrossel img {
-  /* width: 100%;
-  object-fit: contain;  */
-  /* background-position: center; 
-  background-size: cover;  */
-
 }
 
 /* main - termino */
@@ -186,38 +187,6 @@ main {
 
 /* your style - inicio  */
 
-/* .yourStyle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.yourStyle h2 {
-  color: #888888;
-  font-size: 25px;
-}
-
-.yourStyleIndustrial {
-  background-color: blue;
-  width: 608px;
-  height: 80px;
-  text-align: center;
-  color: #FFFFFF;
-}
-
-.yourStyle .yourStyleModern {
-  background-color: antiquewhite;
-  width: 100%;
-  height: 80px;
-}
-
-.yourStyle .yourStyleClassic {
-  width: 100%;
-  height: 80px;
-}
-
-
-
 .yourStyle {
   display: flex;
   flex-direction: column;
@@ -227,41 +196,13 @@ main {
   margin: 30px;
 }
 
-.yourStyle .yourStyleTitulo {
+.yourStyle .titulo {
   font-size: 2em;
   color: #888888;
   margin-bottom: 13px;
 }
 
-.yourStyle .yourStyleIndustrial {
-  margin-top: 13px;
-  max-width: 697px;
-  width: 100%;
-  opacity: 0.5;
-  height: 80px;
-  color: #fff;
-  background-image: url("../img/yourStyleIndustrial.svg");
-  background-size: cover;
-  background-position: center;
-} */
-
-
-.your-style {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 608px;
-  margin: 30px;
-}
-
-.your-style .titulo {
-  font-size: 2em;
-  color: #888888;
-  margin-bottom: 13px;
-}
-
-.industrial {
+.yourStyle .industrial {
   margin-top: 13px;
   max-width: 697px;
   width: 100%;
