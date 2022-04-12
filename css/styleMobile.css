@@ -1,0 +1,80 @@
+/**
+  *   mobile
+  */
+
+  @media (max-width: 768px) {
+
+    container {
+      width: 100vw;
+    }
+  
+    /* header - inicio  */
+    header {
+      width: 100vw;
+    }
+    
+    header nav .marca .logo {
+      margin-left: 10px;
+    }
+    /* header - termino */
+  
+    /* main - inicio */
+    main {
+      margin: 10px;
+    }
+  
+    /* main ofertas - inicio */
+    .ofertas {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      margin: 10px 0px;
+    }
+  
+    .ofertaEsquerda, .ofertaDireita {
+      width: auto;
+      height: auto;
+    }
+    
+  
+    .detalhesOferta {
+      margin-bottom: 10px;
+    }
+    
+    /* main ofertas - termino     */
+  
+    .yourStyle {
+      width: 100vw;
+    }
+    /* main - termino */
+  
+    /* footer - inicio */
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      height: auto;
+      padding: 10px 0px;
+    }
+  
+    footer .footerMapa {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      height: 100%;
+      padding: 10px;
+    }
+  
+    footer .footerContato {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 10px;
+    }
+    /* footer - termino */
+  }  
+  

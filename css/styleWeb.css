@@ -9,6 +9,7 @@
   --header-cor-slogan: #AAAAAA;
 
   --main-ofertas-cor-fundo: #EEEEEE;
+  --main-ofertas-cor-texto: #555555;
   --main-ofertas-cor-texto-botao: #FFFFFF;
   --main-ofertas-cor-botao-new: #51d275;
   --main-ofertas-cor-botao-sale: #DC9730;
@@ -91,7 +92,7 @@ header nav .marca .slogan{
 }
 
 header nav .menu{
-  margin-right: 10px;
+  margin-right: 44px;
 }
 .linhaMenu {
   background-color: #AAAAAA;
@@ -107,7 +108,7 @@ header nav .menu{
 /* main - inicio */
 
 main {
-  margin: 20px 10px 20px 44px;
+  margin: 20px 44px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,8 +123,6 @@ main .carrossel {
   background-position: center;
   background-size: cover;
   position: relative;
-
-
 }
 
 .prev {
@@ -149,6 +148,8 @@ main .carrossel {
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
+  background-color: var(--main-ofertas-cor-fundo);
+  color: var(--main-ofertas-cor-texto);
 }
 
 .ofertaEsquerda, .ofertaDireita {
@@ -254,17 +255,11 @@ main .carrossel {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
   font-size: 25px;
 }
-
-
-
 /* your style - termino  */
-
-
 /* main - termino */
 
 
 /* footer inicio */
-
 footer {
   background-color: var(--footer-cor-fundo);
   color: var(--footer-cor-texto);
@@ -315,82 +310,3 @@ footer .footerContato .footerContatoRedeSociais ul li a{
 /* footer - termino */
 
   
-/**
-  *   mobile
-  */
-
-@media (max-width: 768px) {
-
-  container {
-    width: 100vw;
-  }
-
-  /* header - inicio  */
-  header {
-    width: 100vw;
-  }
-  
-  header nav .marca .logo {
-    margin-left: 10px;
-  }
-  /* header - termino */
-
-  /* main - inicio */
-  main {
-    margin: 10px;
-  }
-
-  /* main ofertas - inicio */
-  .ofertas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 10px 0px;
-  }
-
-  .ofertaEsquerda, .ofertaDireita {
-    width: auto;
-    height: auto;
-  }
-  
-
-  .detalhesOferta {
-    margin-bottom: 10px;
-  }
-  
-  /* main ofertas - termino     */
-
-  .yourStyle {
-    width: 100vw;
-  }
-  /* main - termino */
-
-  /* footer - inicio */
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-    padding: 10px 0px;
-  }
-
-  footer .footerMapa {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    height: 100%;
-    padding: 10px;
-  }
-
-  footer .footerContato {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 10px;
-  }
-  /* footer - termino */
-}  
