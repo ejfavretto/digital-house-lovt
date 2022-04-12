@@ -1,9 +1,24 @@
+/* variaveis */
 :root {
-  --cor-fundo-principal: #FFFFFF;
-  --cor-texto-principal: #FFFFFF;
-  --cor-fundo-body: #E5E5E5;
+  --largura-padrao: 900px;
+
+  --container-cor-fundo: #FFFFFF;
+  
+  --header-altura: 49px;
+  --header-cor-logo: #777777;
+  --header-cor-slogan: #AAAAAA;
+
+  --main-ofertas-cor-fundo: #EEEEEE;
+  --main-ofertas-cor-texto-botao: #FFFFFF;
+  --main-ofertas-cor-botao-new: #51d275;
+  --main-ofertas-cor-botao-sale: #DC9730;
+
+  --footer-cor-fundo: #333333;
+  --footer-cor-texto: #FFFFFF;
 
 }
+/* variaveis */
+
 
 * {
   margin: 0;
@@ -11,18 +26,24 @@
   box-sizing: border-box;
   font-family: 'Ropa Sans', sans-serif;
   font-style: normal;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
   display: flex;
-  justify-content: center;
-  background-color: var(--cor-fundo-body);
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--container-cor-fundo);
 }
 
+
+/* container - inicio */
 container {
-  width: 687px;
-  background-color: var(--cor-fundo-principal);
+  background-color: var(--container-cor-fundo);
+  width: var(--largura-padrao);
 }
+/* container - termino */
 
 /* header - inicio */
 header {
@@ -34,108 +55,112 @@ header {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-.logoSlogan {
+header nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--largura-padrao);
+  height: var(--header-altura);
 }
 
-.logo {
+header nav .marca {
+  display: flex;
+  align-items: center;
+}
+
+header nav .marca .logo {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 30px;
   line-height: 32px;
-  color: #777777;
+  color: var(--header-cor-logo);
   margin-top: 8px;
   margin-left: 44px;
   margin-bottom: 16px;
 }
 
-.slogan{
+header nav .marca .slogan{
   display: flex;
   flex-direction: column;
   font-weight: 400;
   font-size: 10px;
-  color: #AAAAAA;
+  color: var(--header-cor-slogan);
   margin-top: 13px;
   margin-left: 10px;
   margin-bottom: 14px;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px;
-  margin-left: 31px;
+header nav .menu{
+  margin-right: 10px;
 }
-
-a {
-  text-decoration: none;
-}
-
-.menu {
+.linhaMenu {
   background-color: #AAAAAA;
   width: 20px;
   height: 2px;
-  margin-bottom: 4px;
   border-radius: 30px;
+  margin-bottom: 4px;
   margin-left: 31px;
 }
 
 /* header - termino */
 
-/* main - inicio  */
+/* main - inicio */
+
 main {
+  margin: 20px 10px 20px 44px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 20px 0px;
 }
 
-.carrossel {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;  
+main .carrossel {
+  padding-bottom: 10px;
+  height: 259px;
+  width: 100%;
   background-image: url(../img/carrossel.svg);
   background-position: center;
   background-size: cover;
   position: relative;
-  width: 608px;
-  height: 259px;
+
+
 }
 
-.carrossel img {
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  cursor: pointer;
+  color: #fff;
 }
 
-/* main - termino */
+.next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+}
 
-/* ofertas - inicio  */
 
+/* main ofertas - inicio */
 .ofertas {
   display: flex;
   justify-content: space-between;
-  width: 608px;
-  height: 242px;
+  width: 100%;
+  margin-top: 20px;
 }
 
-.ofertas .ofertaEsquerda .ofertaDireita {
+.ofertaEsquerda, .ofertaDireita {
   display: flex;
   flex-direction: column;
-}
-
-.ofertas .ofertaEsquerda {
-  width: 256px;
-  height: 144px;
-}
-
-.ofertas .ofertaDireita {
-  width: 256px;
-  height: 144px;
+  width: 350px;
+  height: auto;
 }
 
 .detalhesOferta {
   text-align: justify;
   font-size: 10px;
-  margin-bottom: 10px;
 }
 
 .detalheOfertaValorBotao {
@@ -144,68 +169,66 @@ main {
   align-items: center;
 }
 
-.detalhesOferta .valorOferta {
+.valorOferta {
   font-size: 25px;
   color: #888888;
 }
 
-.detalhesOferta .botaoOfertaNew {
+.botaoOfertaNew {
   font-size: 20px;
   width: 56px;
   height: 21px;
   text-decoration: none;
   text-transform: capitalize;
-  color: white;
-  background: #51d275;
+  color: var(--main-ofertas-cor-texto-botao);
+  background: var(--main-ofertas-cor-botao-new);
   border-radius: 10.5px;
   text-align: center;
   border: none;
   cursor: pointer;  
 }
 
-.detalhesOferta .botaoOfertaSales {
+.botaoOfertaSale {
   font-size: 20px;
   width: 56px;
   height: 21px;
   text-decoration: none;
   text-transform: capitalize;
-  color: white;
-  background: #DC9730;
+  color: var(--main-ofertas-cor-texto-botao);
+  background: var(--main-ofertas-cor-botao-sale);
   border-radius: 10.5px;
   text-align: center;
   border: none;
   cursor: pointer;  
 }
 
-.descricaoOferta {
-  margin-top: 10px;
-}
-
-/* ofertas - termino  */
+/* main ofertas - termino */
 
 /* your style - inicio  */
 
 .yourStyle {
   display: flex;
   flex-direction: column;
+  max-width: var(--largura-padrao);
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 608px;
-  margin: 30px;
-}
+  margin: 20px;
+} 
 
-.yourStyle .titulo {
+.titulo {
   font-size: 2em;
   color: #888888;
+  text-align: center;
   margin-bottom: 13px;
 }
 
 .yourStyleImagem {
   margin-top: 13px;
-  max-width: 697px;
   width: 100%;
   opacity: 0.5;
   height: 80px;
-  color: #fff;
+  /* color: #fff; */
   background-size: cover;
   background-position: center;
 }
@@ -224,97 +247,150 @@ main {
   background-image: url(../img/yourStyleClassic.svg);
 }
 
-.yourStyle span {
+.yourStyleImagemSpan {
   position: relative;
   top: 30%;
   left: 45%;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
   font-size: 25px;
 }
+
+
+
 /* your style - termino  */
 
-/* footer - inicio  */
+
+/* main - termino */
+
+
+/* footer inicio */
+
 footer {
+  background-color: var(--footer-cor-fundo);
+  color: var(--footer-cor-texto);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #333333;
-  color: #FFFFFF;
-  font-size: 12px;
   height: 243px;
+  font-size: 12px;
 }
 
-footer ul li{
-  list-style: none;
+footer .footerMapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.mapa {
-  background-image: url(../img/mapa.svg);
-  width: 252px;
-  height: 163px;
-  margin: 40px;
-}
-
-.dados-endereco {
+footer .footerContato{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  height: 100%;
-  margin: 20px;
 }
 
-.dados-endereco ul li {
-  text-decoration: none;
+footer .footerContato .footerContatoInfo {
+  width: 100%;
   line-height: 26px;
-
-}
-.contatos {
-  background-color: lightcoral;
 }
 
-.redesSociais {
+footer .footerContato .footerContatoRedeSociais{
+  display: flex;
+  flex-direction: column;
   margin-top: 10px;
 }
 
-.redesSociais span {
+footer .footerContato .footerContatoRedeSociais span{
   text-transform: uppercase;
+  margin: 10px 0px 5px;
 }
 
-.redesSociaisIcones ul li {
+footer .footerContato .footerContatoRedeSociais ul li{
   display: inline-block;
   margin-right: 20px;
 }
 
-.redesSociaisIcones ul li a {
-  color: var(--cor-texto-principal);
-
+footer .footerContato .footerContatoRedeSociais ul li a{
+  color: var(--footer-cor-texto);
 }
-/* footer - inicio  */
 
+/* footer - termino */
 
+  
 /**
   *   mobile
   */
 
 @media (max-width: 768px) {
-  
+
   container {
-    width: 100%;
+    width: 100vw;
   }
 
+  /* header - inicio  */
   header {
-    display: flex;
+    width: 100vw;
+  }
+  
+  header nav .marca .logo {
+    margin-left: 10px;
+  }
+  /* header - termino */
+
+  /* main - inicio */
+  main {
+    margin: 10px;
   }
 
-  .logoSlogan {
-    margin-left: -35px;
-  }
-
-  footer {
+  /* main ofertas - inicio */
+  .ofertas {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  .ofertaEsquerda, .ofertaDireita {
+    width: auto;
     height: auto;
   }
   
-}
+
+  .detalhesOferta {
+    margin-bottom: 10px;
+  }
+  
+  /* main ofertas - termino     */
+
+  .yourStyle {
+    width: 100vw;
+  }
+  /* main - termino */
+
+  /* footer - inicio */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    padding: 10px 0px;
+  }
+
+  footer .footerMapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    padding: 10px;
+  }
+
+  footer .footerContato {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+  }
+  /* footer - termino */
+}  
